@@ -31,4 +31,14 @@ library(mycoursera)
 ```
 fars_read_years(years)
 ```
-* 
+* Summarize FARS Data for Multiple Years by counting the number of accidents for each month in each year
+```
+fars_summarize_years(years)
+```
+* Map FARS Data for a Specific State and Year
+```
+fars_map_state(state.num, year)
+```
+
+## Getting Started
+The package vignette demonstrates how to use the **`mycoursera`** workflow to perform a basic analysis pipeline for FARS data. This vignette can be viewed online [here](http://htmlpreview.github.io/?https://github.com/himelmallick/IntegratedLearner/blob/master/vignettes/IntegratedLearner.html).
