@@ -41,4 +41,4 @@ fars_map_state(state.num, year)
 ```
 
 ## Getting Started
-The package vignette demonstrates how to use the **`mycoursera`** workflow to perform a basic analysis pipeline for FARS data. This vignette can be viewed online [here](http://htmlpreview.github.io/?https://github.com/himelmallick/IntegratedLearner/blob/master/vignettes/IntegratedLearner.html).
+The package vignette demonstrates how to use the **`mycoursera`** workflow to perform a basic analysis pipeline for FARS data. This vignette can be viewed online [here](file:///Users/shuilan/Documents/GitHub/Coursera/mycoursera/vignettes/model_details.html).
