@@ -1,0 +1,65 @@
+---
+title: "A basic analysis pipeline for FARS data"
+author: "Lan Shui"
+date: "2023-12-09" # "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{mycoursera}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+This vignette highlights some example workflows for performing analysis for Fatality Analysis Reporting System (FARS) data, including reading data, summarizing, and visualizing accident information, using the `mycoursera` R package. 
+
+## Load Packages
+Once installed, **`mycoursera`** can be simply loaded (along with the required packages) as follows:
+```{r setup,eval=FALSE}
+# Load the mycoursera package
+install.packages('mycoursera')
+library(mycoursera)
+
+# Load other essential packages for this tutorial
+library(devtools)
+library(dplyr)
+library(readr)
+library(maps)
+library(tidyr)
+library(graphics)
+```
+
+## Basic Usage
+### Read data from a CSV file and returns it as a tibble
+```{r,eval=FALSE}
+fars_data <- fars_read("path/to/your/file.csv")
+```
+
+### Generate a filename for FARS (Fatality Analysis Reporting System) data for a given year
+```{r,eval=FALSE}
+filename <- make_filename(2013)
+# Output: "accident_2013.csv.bz2"
+```
+
+### Read FARS data for multiple years and returns a list of tibbles
+```{r,eval=FALSE}
+# Read FARS data for the years 2013 and 2014
+data_list <- fars_read_years(c(2013, 2014))
+```
+
+### Summarize FARS data for multiple years by counting the number of accidents
+```{r,eval=FALSE}
+# Summarize FARS data for the years 2013 and 2014
+summary_data <- fars_summarize_years(c(2013, 2014))
+```
+
+### Maps FAR data for a specific state and year
+```{r,eval=FALSE}
+# Map FARS data for state number 5 in the year 2013
+fars_map_state(5, 2013)
+```
